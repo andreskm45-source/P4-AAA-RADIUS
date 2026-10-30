@@ -1,0 +1,19 @@
+# --- Sistema operativo ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- Secretos y capturas temporales ---
+.env
+*.key
+*.pem
+~$*
+
+# --- Editores ---
+.vscode/
+.idea/
+
+# --- Salidas temporales de herramientas ---
+__pycache__/
+*.pyc
+*.log.tmp

@@ -1,0 +1,3 @@
+nombre,ip,secreto_compartido,vendor,auth_port,acct_port,descripcion
+P4-R1,10.7.84.129,CAMBIAR_CLAVE,Cisco,1812,1813,Router R1-P4 - origen RADIUS VLAN99
+P4-SW1,10.7.84.130,CAMBIAR_CLAVE,Cisco,1812,1813,Switch SW1-P4 - origen RADIUS VLAN99

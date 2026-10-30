@@ -1,0 +1,63 @@
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R1-P4 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+User Access Verification
+
+Username: usr.nivel10
+Password: 
+
+R1-P4#
+*Mar  1 05:02:46.350: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: usr.nivel10] [Source: 0.0.0.0] [localport: 0] at 05:02:46 UTC Fri Mar 1 2002
+R1-P4#show privilege
+Current privilege level is 10
+R1-P4#

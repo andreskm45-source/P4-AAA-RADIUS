@@ -1,0 +1,173 @@
+Building configuration...
+
+Current configuration : 3902 bytes
+!
+! ============================================================================
+!  SW1-P4 - Running-config de referencia (Laboratorio P4)
+!  Rafael Andres Reyes De La Cruz - 2025-0784 - Red 10.7.84.0/24
+!  NOTA: este archivo se genera a partir de configs/SW1-P4_base.cfg. Reemplacelo
+!        por la salida real de "show running-config" una vez aplicada la config.
+!        Los secretos se muestran en claro para facilitar la lectura; en el
+!        equipo aparecen cifrados (tipos 5 y 7) por "service password-encryption".
+! ============================================================================
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec localtime show-timezone
+service password-encryption
+service sequence-numbers
+service tcp-keepalives-in
+service tcp-keepalives-out
+!
+hostname SW1-P4
+!
+boot-start-marker
+boot-end-marker
+!
+logging buffered 16384 informational
+logging console warnings
+logging monitor informational
+!
+aaa new-model
+!
+aaa group server radius RAD-P4
+ server name NPS-P4
+!
+aaa authentication login CON-RADIUS group RAD-P4 local
+aaa authorization console
+aaa authorization exec CON-RADIUS group RAD-P4 local
+aaa accounting exec CON-RADIUS start-stop group RAD-P4
+aaa accounting commands 15 CON-RADIUS start-stop group RAD-P4
+aaa session-id common
+!
+clock timezone COT -5 0
+!
+no ip domain lookup
+ip domain name p4.redes.local
+login on-failure log
+login on-success log
+!
+ip ssh version 2
+ip ssh time-out 60
+ip ssh authentication-retries 3
+ip ssh logging events
+!
+username admin.p4 privilege 15 secret 5 $1$mERr$Kg5eH0m5lYq3lT0oQ0J0k/
+!
+! --- Niveles de privilegio ---
+privilege exec level 10 show running-config
+privilege exec level 10 show startup-config
+privilege exec level 10 configure
+privilege exec level 10 write
+!
+! --- VLANs ---
+vlan 10
+ name USUARIOS
+vlan 20
+ name SERVIDORES
+vlan 99
+ name GESTION-AAA
+vlan 999
+ name NATIVA-PARKING
+!
+ip dhcp snooping
+ip dhcp snooping vlan 10
+no ip dhcp snooping information option
+!
+interface GigabitEthernet0/1
+ description TRUNK-HACIA-R1
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,99
+ switchport mode trunk
+ switchport nonegotiate
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/2
+ description SRV1-P4-AD-NPS-VLAN20
+ switchport access vlan 20
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ switchport port-security violation restrict
+ storm-control broadcast level 5.00
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no cdp enable
+!
+interface GigabitEthernet0/3
+ description DEMO-CLIENTE-VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport nonegotiate
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ switchport port-security violation restrict
+ storm-control broadcast level 5.00
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ no cdp enable
+!
+interface GigabitEthernet0/4
+ description PUERTO-NO-USADO
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+! (Gi0/5 a Gi0/24 con la misma configuracion de parking)
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan99
+ description GESTION-AAA
+ ip address 10.7.84.130 255.255.255.192
+!
+ip default-gateway 10.7.84.129
+ip access-list standard SSH-ADMIN
+ permit 10.7.84.64 0.0.0.63
+!
+!
+radius server NPS-P4
+ address ipv4 10.7.84.66 auth-port 1812 acct-port 1813
+ key 7 0822455D0A16544541
+ timeout 5
+ retransmit 2
+!
+ip radius source-interface Vlan99
+!
+ntp source Vlan99
+ntp server 10.7.84.66
+!
+spanning-tree mode rapid-pvst
+!
+line con 0
+ login authentication CON-RADIUS
+ authorization exec CON-RADIUS
+ accounting exec CON-RADIUS
+ accounting commands 15 CON-RADIUS
+ exec-timeout 5 0
+ logging synchronous
+line aux 0
+ login authentication CON-RADIUS
+ authorization exec CON-RADIUS
+ accounting exec CON-RADIUS
+ accounting commands 15 CON-RADIUS
+ exec-timeout 5 0
+ logging synchronous
+line vty 0 4
+ access-class SSH-ADMIN in
+ exec-timeout 10 0
+ logging synchronous
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input none
+!
+!
+end

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="830" viewBox="0 0 1400 830" role="img">
+<defs>
+<marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+<marker id="arwB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker>
+<marker id="arwR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+</defs>
+<rect width="1400" height="830" fill="#ffffff"/>
+<text x="60" y="54" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="27" fill="#0f172a" font-weight="700" text-anchor="start">Flujo AAA entre el administrador, los equipos Cisco y el servidor NPS</text>
+<text x="60" y="82" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="14" fill="#475569" font-weight="400" text-anchor="start">Secuencia de autenticación, autorización y auditoría · Lab P4 · 2025-0784</text>
+<rect x="1080" y="30" width="260" height="40" rx="20" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+<text x="1210" y="56" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#3730a3" font-weight="700" text-anchor="middle">RADIUS · NPS</text>
+<line x1="60" y1="104" x2="1340" y2="104" stroke="#e2e8f0" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="55" y="130" width="190" height="56" rx="8" fill="#ffffff" stroke="#0f172a" stroke-width="1.6"/>
+<rect x="55" y="130" width="190" height="5" rx="2" fill="#0f172a"/>
+<text x="150" y="160" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#0f172a" font-weight="700" text-anchor="middle">Administrador</text>
+<text x="150" y="176" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#475569" font-weight="400" text-anchor="middle">consola / auxiliar</text>
+<line x1="150" y1="186" x2="150" y2="700" stroke="#cbd5e1" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<rect x="305" y="130" width="190" height="56" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6"/>
+<rect x="305" y="130" width="190" height="5" rx="2" fill="#1d4ed8"/>
+<text x="400" y="160" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#0f172a" font-weight="700" text-anchor="middle">R1 / SW1</text>
+<text x="400" y="176" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#475569" font-weight="400" text-anchor="middle">cliente RADIUS</text>
+<line x1="400" y1="186" x2="400" y2="700" stroke="#cbd5e1" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<rect x="555" y="130" width="190" height="56" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<rect x="555" y="130" width="190" height="5" rx="2" fill="#7c3aed"/>
+<text x="650" y="160" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#0f172a" font-weight="700" text-anchor="middle">NPS</text>
+<text x="650" y="176" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#475569" font-weight="400" text-anchor="middle">10.7.84.66</text>
+<line x1="650" y1="186" x2="650" y2="700" stroke="#cbd5e1" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<rect x="805" y="130" width="190" height="56" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="805" y="130" width="190" height="5" rx="2" fill="#0f766e"/>
+<text x="900" y="160" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#0f172a" font-weight="700" text-anchor="middle">AD DS</text>
+<text x="900" y="176" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#475569" font-weight="400" text-anchor="middle">p4.redes.local</text>
+<line x1="900" y1="186" x2="900" y2="700" stroke="#cbd5e1" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<rect x="1055" y="130" width="190" height="56" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="1.6"/>
+<rect x="1055" y="130" width="190" height="5" rx="2" fill="#d97706"/>
+<text x="1150" y="160" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#0f172a" font-weight="700" text-anchor="middle">Auditoría</text>
+<text x="1150" y="176" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#475569" font-weight="400" text-anchor="middle">Eventos + log</text>
+<line x1="1150" y1="186" x2="1150" y2="700" stroke="#cbd5e1" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+<rect x="36" y="205" width="6" height="120" rx="3" fill="#1d4ed8"/>
+<text x="30" y="265.0" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#1d4ed8" text-anchor="middle" transform="rotate(-90 30 265.0)" letter-spacing="1.5">AUTENTICACIÓN</text>
+<rect x="36" y="355" width="6" height="120" rx="3" fill="#7c3aed"/>
+<text x="30" y="415.0" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#7c3aed" text-anchor="middle" transform="rotate(-90 30 415.0)" letter-spacing="1.5">AUTORIZACIÓN</text>
+<rect x="36" y="505" width="6" height="150" rx="3" fill="#d97706"/>
+<text x="30" y="580.0" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#d97706" text-anchor="middle" transform="rotate(-90 30 580.0)" letter-spacing="1.5">AUDITORÍA</text>
+<line x1="158" y1="225" x2="392" y2="225" stroke="#64748b" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="126.475" y="204" width="297.05" height="16" rx="4" fill="#ffffff"/>
+<text x="275.0" y="216" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">1. login en consola/auxiliar (usuario + contraseña)</text>
+<line x1="408" y1="285" x2="642" y2="285" stroke="#1d4ed8" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="382.025" y="264" width="285.95" height="16" rx="4" fill="#ffffff"/>
+<text x="525.0" y="276" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">2. Access-Request · UDP 1812 · NAS-IP .129 / .130</text>
+<line x1="658" y1="345" x2="892" y2="345" stroke="#7c3aed" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="648.675" y="324" width="252.65" height="16" rx="4" fill="#ffffff"/>
+<text x="775.0" y="336" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">3. valida credenciales y grupos del usuario</text>
+<line x1="892" y1="405" x2="658" y2="405" stroke="#0f766e" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#arw)"/>
+<rect x="657.0" y="384" width="236.0" height="16" rx="4" fill="#ffffff"/>
+<text x="775.0" y="396" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">4. credenciales OK + GRP_NIVEL0 / 5 / 10</text>
+<line x1="642" y1="465" x2="408" y2="465" stroke="#7c3aed" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#arw)"/>
+<rect x="382.025" y="444" width="285.95" height="16" rx="4" fill="#ffffff"/>
+<text x="525.0" y="456" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">5. Access-Accept + Cisco-AV-Pair shell:priv-lvl=N</text>
+<line x1="392" y1="525" x2="158" y2="525" stroke="#1d4ed8" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#arw)"/>
+<rect x="162.55" y="504" width="224.9" height="16" rx="4" fill="#ffffff"/>
+<text x="275.0" y="516" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">6. prompt con privilegio N (0, 5 o 10)</text>
+<line x1="408" y1="590" x2="642" y2="590" stroke="#d97706" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="359.82500000000005" y="569" width="330.34999999999997" height="16" rx="4" fill="#ffffff"/>
+<text x="525.0" y="581" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">7. Accounting Start / Stop + comandos nivel 15 · UDP 1813</text>
+<line x1="658" y1="650" x2="1142" y2="650" stroke="#d97706" stroke-width="1.7" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="765.35" y="629" width="269.29999999999995" height="16" rx="4" fill="#ffffff"/>
+<text x="900.0" y="641" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.6" fill="#334155" font-weight="600" text-anchor="middle">8. Evento 6272/6273/6274 + log de contabilidad</text>
+<rect x="300" y="700" width="1000" height="66" rx="10" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.2"/>
+<text x="318" y="726" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12" fill="#92400e" font-weight="700" text-anchor="start">Escenario alterno — NPS sin respuesta (timeout 5 s)</text>
+<text x="318" y="746" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.8" fill="#78350f" font-weight="400" text-anchor="start">El método RAD-P4 devuelve error y se usa el siguiente método: base local. admin.p4 (nivel 15) mantiene el acceso de emergencia por consola/auxiliar.</text>
+<text x="300" y="800" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#64748b" font-weight="400" text-anchor="start">Los usuarios RADIUS nunca se validan en la VTY: el SSH usa login local y está restringido a 10.7.84.64/26.</text>
+</svg>

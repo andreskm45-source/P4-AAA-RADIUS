@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900" role="img">
+<defs>
+<marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+<marker id="arwB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker>
+<marker id="arwR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+</defs>
+<rect width="1500" height="900" fill="#ffffff"/>
+<text x="60" y="54" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="27" fill="#0f172a" font-weight="700" text-anchor="start">Laboratorio P4 — AAA con RADIUS, Active Directory y NPS</text>
+<text x="60" y="82" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="14" fill="#475569" font-weight="400" text-anchor="start">Autor: Rafael Andrés Reyes De La Cruz · Matrícula 2025-0784 · PNetLab · Seguridad de Redes</text>
+<rect x="1180" y="30" width="260" height="40" rx="20" fill="#eef2ff" stroke="#c7d2fe" stroke-width="1.2"/>
+<text x="1310" y="56" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#3730a3" font-weight="700" text-anchor="middle">Red 10.7.84.0/24</text>
+<line x1="60" y1="104" x2="1440" y2="104" stroke="#e2e8f0" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="60" y="124" width="340" height="170" rx="12" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.8"/>
+<path d="M72,124 h316 a12,12 0 0 1 12,12 v32 h-340 v-32 a12,12 0 0 1 12,-12 z" fill="#1d4ed8"/>
+<text x="78" y="154" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700" text-anchor="start">R1-P4</text>
+<text x="382" y="154" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#e2e8f0" font-weight="400" text-anchor="end">Cisco IOS 15.x</text>
+<text x="76" y="186" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">G0/0.10  10.7.84.1/26</text>
+<text x="384" y="186" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="end">VLAN 10</text>
+<text x="76" y="210" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">G0/0.20  10.7.84.65/26</text>
+<text x="384" y="210" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="end">VLAN 20</text>
+<text x="76" y="234" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">G0/0.99  10.7.84.129/26</text>
+<text x="384" y="234" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="end">VLAN 99</text>
+<text x="76" y="258" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">RADIUS 10.7.84.66 · grupo RAD-P4</text>
+<text x="76" y="282" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">AAA solo en con / aux · VTY local</text>
+<rect x="60" y="420" width="340" height="262" rx="12" fill="#ffffff" stroke="#0f766e" stroke-width="1.8"/>
+<path d="M72,420 h316 a12,12 0 0 1 12,12 v32 h-340 v-32 a12,12 0 0 1 12,-12 z" fill="#0f766e"/>
+<text x="78" y="450" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700" text-anchor="start">SW1-P4</text>
+<text x="382" y="450" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#e2e8f0" font-weight="400" text-anchor="end">Catalyst 2960 / IOU</text>
+<text x="76" y="482" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">SVI Vlan99  10.7.84.130/26</text>
+<text x="384" y="482" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#0f766e" font-weight="700" text-anchor="end">MGMT</text>
+<text x="76" y="506" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">Gi0/1  trunk 802.1Q → R1</text>
+<text x="76" y="530" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">Gi0/2  access VLAN 20 → SRV1</text>
+<text x="76" y="554" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">Gi0/3  access VLAN 10 (demo)</text>
+<text x="76" y="578" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">Gi0/4-24  parking VLAN 999</text>
+<text x="76" y="602" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">Port-security · BPDU guard · DHCP snoop</text>
+<text x="76" y="626" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">SSH solo desde 10.7.84.64/26</text>
+<line x1="230" y1="294" x2="230" y2="420" stroke="#0f766e" stroke-width="5" stroke-linecap="round"/>
+<circle cx="230" cy="294" r="5" fill="#0f766e"/>
+<circle cx="230" cy="420" r="5" fill="#0f766e"/>
+<rect x="246" y="316" width="250" height="66" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.2"/>
+<text x="258" y="338" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#065f46" font-weight="700" text-anchor="start">TRUNK 802.1Q</text>
+<text x="258" y="356" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#047857" font-weight="400" text-anchor="start">Gi0/1 ↔ Gi0/1 · VLAN 10,20,99</text>
+<text x="258" y="372" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#047857" font-weight="400" text-anchor="start">nativa 999 (sin uso)</text>
+<rect x="500" y="118" width="940" height="250" rx="14" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="520" y="146" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="14.5" fill="#0f172a" font-weight="700" text-anchor="start">Flujo AAA — autenticación y autorización en consola y auxiliar</text>
+<text x="520" y="168" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="start">VTY: login local + SSH  →  los usuarios de Active Directory no entran por SSH</text>
+<rect x="528" y="190" width="156" height="86" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="1.6"/>
+<rect x="528" y="190" width="156" height="6" rx="3" fill="#dc2626"/>
+<text x="606.0" y="230" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12.5" fill="#0f172a" font-weight="700" text-anchor="middle">Consola / AUX</text>
+<text x="606.0" y="250" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#475569" font-weight="400" text-anchor="middle">línea con AAA</text>
+<line x1="688" y1="233.0" x2="706" y2="233.0" stroke="#64748b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="710" y="190" width="156" height="86" rx="10" fill="#ffffff" stroke="#1d4ed8" stroke-width="1.6"/>
+<rect x="710" y="190" width="156" height="6" rx="3" fill="#1d4ed8"/>
+<text x="788.0" y="230" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12.5" fill="#0f172a" font-weight="700" text-anchor="middle">R1 / SW1</text>
+<text x="788.0" y="250" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#475569" font-weight="400" text-anchor="middle">cliente RADIUS</text>
+<line x1="870" y1="233.0" x2="888" y2="233.0" stroke="#64748b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="892" y="190" width="156" height="86" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.6"/>
+<rect x="892" y="190" width="156" height="6" rx="3" fill="#7c3aed"/>
+<text x="970.0" y="230" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12.5" fill="#0f172a" font-weight="700" text-anchor="middle">NPS</text>
+<text x="970.0" y="250" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#475569" font-weight="400" text-anchor="middle">10.7.84.66:1812</text>
+<line x1="1052" y1="233.0" x2="1070" y2="233.0" stroke="#64748b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="1074" y="190" width="156" height="86" rx="10" fill="#ffffff" stroke="#0f766e" stroke-width="1.6"/>
+<rect x="1074" y="190" width="156" height="6" rx="3" fill="#0f766e"/>
+<text x="1152.0" y="230" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12.5" fill="#0f172a" font-weight="700" text-anchor="middle">AD DS</text>
+<text x="1152.0" y="250" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#475569" font-weight="400" text-anchor="middle">p4.redes.local</text>
+<line x1="1234" y1="233.0" x2="1252" y2="233.0" stroke="#64748b" stroke-width="1.6" stroke-linecap="round" marker-end="url(#arw)"/>
+<rect x="1256" y="190" width="156" height="86" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.6"/>
+<rect x="1256" y="190" width="156" height="6" rx="3" fill="#059669"/>
+<text x="1334.0" y="230" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12.5" fill="#0f172a" font-weight="700" text-anchor="middle">Privilegio</text>
+<text x="1334.0" y="250" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#475569" font-weight="400" text-anchor="middle">0 · 5 · 10</text>
+<text x="528" y="312" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" fill="#475569" font-weight="400" text-anchor="start">Access-Request (UDP 1812) → Access-Accept + Cisco-AV-Pair shell:priv-lvl=N → Eventos 6272/6273</text>
+<text x="528" y="334" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" fill="#475569" font-weight="400" text-anchor="start">Accounting exec/commands (UDP 1813) → registro de inicio, fin y comandos de nivel 15</text>
+<text x="528" y="356" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" fill="#b45309" font-weight="600" text-anchor="start">Si NPS no responde (timeout 5 s): fallback local admin.p4 (nivel 15) en consola/auxiliar</text>
+<rect x="1000" y="420" width="380" height="262" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="1.8"/>
+<path d="M1012,420 h356 a12,12 0 0 1 12,12 v32 h-380 v-32 a12,12 0 0 1 12,-12 z" fill="#7c3aed"/>
+<text x="1018" y="450" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="17" fill="#ffffff" font-weight="700" text-anchor="start">SRV1-P4</text>
+<text x="1362" y="450" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#e2e8f0" font-weight="400" text-anchor="end">Windows Server 2019/2022</text>
+<text x="1016" y="482" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">10.7.84.66/26 · GW 10.7.84.65</text>
+<text x="1364" y="482" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10" fill="#7c3aed" font-weight="700" text-anchor="end">VLAN 20</text>
+<text x="1016" y="506" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">AD DS + DNS · p4.redes.local</text>
+<text x="1016" y="530" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">NPS · RADIUS UDP 1812 / 1813</text>
+<text x="1016" y="554" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">GRP_NIVEL0 · GRP_NIVEL5 · GRP_NIVEL10</text>
+<text x="1016" y="578" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">Eventos 6272 / 6273 / 6274 + log</text>
+<text x="1016" y="602" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">NTP w32time (UDP 123)</text>
+<text x="1016" y="626" font-family="Consolas, Courier New, monospace" font-size="11.6" fill="#334155" font-weight="400" text-anchor="start">SSH cliente: admin.p4 → R1 / SW1</text>
+<path d="M400,664 H1000" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arw)"/>
+<text x="410" y="652" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" fill="#6d28d9" font-weight="600" text-anchor="start">Gi0/2 · access · VLAN 20 · 10.7.84.64/26</text>
+<rect x="430" y="430" width="530" height="182" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="448" y="458" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" fill="#0f172a" font-weight="700" text-anchor="start">Segmentación L2 / L3</text>
+<rect x="448" y="475" width="8" height="16" rx="2" fill="#1d4ed8"/>
+<text x="466" y="486" font-family="Consolas, Courier New, monospace" font-size="11.2" fill="#334155" font-weight="400" text-anchor="start">VLAN 10  ·  USUARIOS    10.7.84.0/26    GW .1</text>
+<rect x="448" y="505" width="8" height="16" rx="2" fill="#7c3aed"/>
+<text x="466" y="516" font-family="Consolas, Courier New, monospace" font-size="11.2" fill="#334155" font-weight="400" text-anchor="start">VLAN 20  ·  SERVIDORES  10.7.84.64/26   GW .65</text>
+<rect x="448" y="535" width="8" height="16" rx="2" fill="#059669"/>
+<text x="466" y="546" font-family="Consolas, Courier New, monospace" font-size="11.2" fill="#334155" font-weight="400" text-anchor="start">VLAN 99  ·  GESTIÓN     10.7.84.128/26  GW .129</text>
+<rect x="448" y="565" width="8" height="16" rx="2" fill="#64748b"/>
+<text x="466" y="576" font-family="Consolas, Courier New, monospace" font-size="11.2" fill="#334155" font-weight="400" text-anchor="start">VLAN 999 ·  NATIVA      sin IP (parking)</text>
+<text x="60" y="698" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12" fill="#0f172a" font-weight="700" text-anchor="start">Plan de direccionamiento</text>
+<rect x="60" y="706" width="1380" height="34" rx="6" fill="#0f172a"/>
+<text x="74" y="728" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#ffffff" font-weight="700" text-anchor="start">VLAN</text>
+<text x="164" y="728" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#ffffff" font-weight="700" text-anchor="start">Nombre</text>
+<text x="374" y="728" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#ffffff" font-weight="700" text-anchor="start">Subred</text>
+<text x="584" y="728" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#ffffff" font-weight="700" text-anchor="start">Gateway</text>
+<text x="774" y="728" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#ffffff" font-weight="700" text-anchor="start">Uso / dispositivo</text>
+<rect x="60" y="740" width="1380" height="32" rx="0" fill="#ffffff"/>
+<text x="74" y="761" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10</text>
+<text x="164" y="761" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">USUARIOS</text>
+<text x="374" y="761" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10.7.84.0/26</text>
+<text x="584" y="761" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10.7.84.1</text>
+<text x="774" y="761" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">DHCP .20–.62 · puerto Gi0/3 para PC de prueba</text>
+<line x1="60" y1="772" x2="1440" y2="772" stroke="#e2e8f0" stroke-width="1" stroke-linecap="round"/>
+<rect x="60" y="772" width="1380" height="32" rx="0" fill="#f8fafc"/>
+<text x="74" y="793" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">20</text>
+<text x="164" y="793" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">SERVIDORES</text>
+<text x="374" y="793" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10.7.84.64/26</text>
+<text x="584" y="793" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10.7.84.65</text>
+<text x="774" y="793" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">SRV1-P4 10.7.84.66 · AD DS + DNS + NPS</text>
+<line x1="60" y1="804" x2="1440" y2="804" stroke="#e2e8f0" stroke-width="1" stroke-linecap="round"/>
+<rect x="60" y="804" width="1380" height="32" rx="0" fill="#ffffff"/>
+<text x="74" y="825" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">99</text>
+<text x="164" y="825" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">GESTION-AAA</text>
+<text x="374" y="825" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10.7.84.128/26</text>
+<text x="584" y="825" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10.7.84.129</text>
+<text x="774" y="825" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">R1 .129 · SW1 .130 · tráfico RADIUS y SSH</text>
+<line x1="60" y1="836" x2="1440" y2="836" stroke="#e2e8f0" stroke-width="1" stroke-linecap="round"/>
+<rect x="60" y="836" width="1380" height="32" rx="0" fill="#f8fafc"/>
+<text x="74" y="857" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">999</text>
+<text x="164" y="857" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">NATIVA</text>
+<text x="374" y="857" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">10.7.84.192/26</text>
+<text x="584" y="857" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">—</text>
+<text x="774" y="857" font-family="Consolas, Courier New, monospace" font-size="11.5" fill="#334155" font-weight="400" text-anchor="start">Parking: puertos no usados, sin hosts</text>
+<line x1="60" y1="868" x2="1440" y2="868" stroke="#e2e8f0" stroke-width="1" stroke-linecap="round"/>
+<text x="60" y="884" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="10.5" fill="#64748b" font-weight="400" text-anchor="start">Matrícula 2025-0784 → 10.7.84.0/24, segmentada en /26 · Diagrama generado por scripts/tools/generar_diagramas.py</text>
+</svg>

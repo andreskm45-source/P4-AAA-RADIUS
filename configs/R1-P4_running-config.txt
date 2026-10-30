@@ -1,0 +1,135 @@
+! Captura real; secretos redactados para publicacion.
+Building configuration...
+
+Current configuration : 2569 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname R1-P4
+!
+boot-start-marker
+boot-end-marker
+!
+logging buffered 16384 informational
+enable secret [REDACTADO]
+!
+aaa new-model
+!
+!
+aaa group server radius RAD-P4
+ server 10.7.84.66 auth-port 1812 acct-port 1813
+!
+aaa authentication login CON-RADIUS group RAD-P4 local
+aaa authorization console
+aaa authorization exec CON-RADIUS group RAD-P4 local 
+aaa accounting exec CON-RADIUS start-stop group RAD-P4
+!
+aaa session-id common
+memory-size iomem 5
+ip cef
+!
+!
+ip auth-proxy max-nodata-conns 3
+ip admission max-nodata-conns 3
+no ip dhcp use vrf connected
+ip dhcp excluded-address 10.7.84.1 10.7.84.19
+!
+ip dhcp pool vlan10-Usuarios
+   network 10.7.84.0 255.255.255.192
+   default-router 10.7.84.1 
+   dns-server 10.7.84.66 
+!
+!
+no ip domain lookup
+login on-failure log
+login on-success log
+!
+!
+!
+!
+username admin.p4 privilege 15 secret [REDACTADO]
+!
+!
+ip ssh version 2
+! 
+!
+!
+!
+interface FastEthernet0/0
+ description TRUNK-SW2
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 10.7.84.1 255.255.255.192
+ ip nat inside
+ ip virtual-reassembly
+!
+interface FastEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 10.7.84.65 255.255.255.192
+ ip nat inside
+ ip virtual-reassembly
+!
+interface FastEthernet0/0.99
+ encapsulation dot1Q 99
+ ip address 10.7.84.129 255.255.255.192
+ ip nat inside
+ ip virtual-reassembly
+!
+interface FastEthernet0/1
+ ip address dhcp
+ ip nat outside
+ ip virtual-reassembly
+ duplex auto
+ speed auto
+!
+ip forward-protocol nd
+!
+ip http server
+no ip http secure-server
+ip nat inside source list NAT-P4 interface FastEthernet0/1 overload
+!
+ip access-list standard NAT-P4
+ permit 10.7.84.0 0.0.0.255
+ip access-list standard SSH-ADMIN
+ permit 10.7.84.64 0.0.0.63
+!
+ip radius source-interface FastEthernet0/0.99 
+!
+radius-server host 10.7.84.66 auth-port 1812 acct-port 1813 key [REDACTADO]
+radius-server retransmit 2
+!
+control-plane
+!
+!
+!
+privilege exec level 5 show privilege
+privilege exec level 10 show startup-config
+privilege exec level 10 show running-config
+privilege exec level 5 show
+!
+line con 0
+ authorization exec CON-RADIUS
+ accounting exec CON-RADIUS
+ logging synchronous
+ login authentication CON-RADIUS
+line aux 0
+ authorization exec CON-RADIUS
+ accounting exec CON-RADIUS
+ logging synchronous
+ login authentication CON-RADIUS
+line vty 0 4
+ access-class SSH-ADMIN in
+ logging synchronous
+ transport input ssh
+!
+!
+end
+
+R1-P4#

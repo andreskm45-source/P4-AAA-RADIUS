@@ -1,0 +1,24 @@
+ENTREGA - PRACTICA P4 - SEGURIDAD DE REDES
+==========================================
+
+Nombre completo : Rafael Andres Reyes De La Cruz
+Matricula       : 2025-0784
+Practica        : P4
+Red utilizada   : 10.7.84.0/24
+
+Repositorio GitHub:
+https://github.com/andreskm45-source/P4-AAA-RADIUS
+
+Video demostrativo (YouTube, maximo 10 minutos):
+https://youtu.be/REEMPLAZAR_ID
+
+Contenido del repositorio:
+- README.md con el video al inicio y la documentacion completa.
+- docs/     Documentacion tecnica, pruebas y guion del video.
+- configs/  Configuraciones base y running-configs de R1 y SW1.
+- scripts/  Scripts de PowerShell y Python utilizados.
+- diagrams/ Diagramas de topologia y de flujo AAA.
+- images/   Evidencias (capturas) del laboratorio.
+
+Nota: las credenciales incluidas son exclusivamente para el laboratorio
+academico y deben rotarse en cualquier entorno real.
