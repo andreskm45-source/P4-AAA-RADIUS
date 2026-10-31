@@ -30,9 +30,3 @@ Las imágenes de esta carpeta son **capturas reales del laboratorio**. Los archi
 
 `portada_video.png` es la miniatura del video (generada, no requiere reemplazo).
 
-## Reglas
-
-1. PNG, 1920×1080 o recorte legible; sin datos personales.
-2. Incluir la hora del sistema cuando aporte contexto.
-3. No reutilizar capturas de otros equipos o laboratorios.
-4. Verificar que la imagen no muestre contraseñas en claro (usar `service password-encryption`).
