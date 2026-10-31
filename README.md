@@ -9,8 +9,8 @@
 
 ## 🎥 1. Video demostrativo
 
-> Grabe el video en Teams (máximo 10 minutos, fecha y hora
-> visibles, rostro y voz del autor). Al compartirlo, reemplace `ENLACE_DEL_VIDEO_TEAMS` en este bloque y en el
+https://itlaedudo-my.sharepoint.com/:v:/g/personal/20250784_itla_edu_do/IQDMApNq_Un5TI6yKpdcnMFKAQda-Z5JwhTCC5jSoRcEPKw?e=ofDL1Z&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+ en este bloque y en el
 > archivo `RafaelAndresReyesDeLaCruz_20250784_P4.txt`.
 
 **Video de la práctica en Teams:** `ENLACE_DEL_VIDEO_TEAMS`
