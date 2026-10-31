@@ -21,7 +21,10 @@
 
 Las claves fueron sustituidas por `CAMBIAR_CLAVE` antes de publicar. Configure claves propias antes de ejecutar scripts o aplicar configuraciones.
 
-- [Captura de la topología en PNetLab](evidencias/topologia-real.jpg) y [captura de políticas NPS](evidencias/nps-politicas-reales.png).
+![Topología real en PNetLab](evidencias/topologia-real.jpg)
+
+![Políticas NPS](evidencias/nps-politicas-reales.png)
+
 - Pruebas de consola del router: [nivel 5](evidencias/prueba-router-nivel5.txt) y [nivel 10](evidencias/prueba-router-nivel10.txt), con autenticación exitosa y `show privilege`.
 - [Running-config real del router](configs/R1-P4_running-config.txt), con secretos redactados. El running-config del switch sigue siendo **de referencia**, no una captura real.
 - El reloj del router no estaba sincronizado durante estas pruebas; sus fechas no son evidencia de la fecha real.
