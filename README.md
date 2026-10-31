@@ -9,11 +9,11 @@
 
 ## 🎥 1. Video demostrativo
 
-> El video debe subirse a YouTube (máximo 10 minutos, fecha y hora
-> visibles, rostro y voz del autor). Al publicarlo, reemplace `REEMPLAZAR_ID` en este bloque y en el
+> Grabe el video en Teams (máximo 10 minutos, fecha y hora
+> visibles, rostro y voz del autor). Al compartirlo, reemplace `ENLACE_DEL_VIDEO_TEAMS` en este bloque y en el
 > archivo `RafaelAndresReyesDeLaCruz_20250784_P4.txt`.
 
-[![Video demostrativo P4](images/portada_video.png)](https://youtu.be/REEMPLAZAR_ID)
+**Video de la práctica en Teams:** `ENLACE_DEL_VIDEO_TEAMS`
 
 **Guion y plan de grabación:** [`docs/09_Guion_Video.md`](docs/09_Guion_Video.md) · **Duración objetivo:** 9:30 min.
 

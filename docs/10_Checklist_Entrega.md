@@ -28,7 +28,7 @@
 
 | Marcador | Archivo | Acción |
 |---|---|---|
-| `REEMPLAZAR_ID` | `README.md` y TXT | Pegar el ID real de YouTube |
+| `ENLACE_DEL_VIDEO_TEAMS` | `README.md` y TXT | Pegar el enlace compartido de la grabación de Teams |
 | `REEMPLAZAR_USUARIO` | TXT | Pegar el usuario real de GitHub |
 | `images/*.png` (marcadores grises) | `images/` | Reemplazar por capturas reales manteniendo el nombre |
 | `configs/*_running-config.txt` | `configs/` | Reemplazar por la salida real de `show running-config` |

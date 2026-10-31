@@ -12,7 +12,7 @@
 | Fecha y hora | Verificar reloj de Windows y de los equipos (`show clock`) |
 | Pestañas abiertas | PNetLab (topología), consola R1, consola SW1, NPS, AD, README del repo |
 | Ventanas | Fuente de consola ≥ 14 pt, zoom del navegador al 110 % |
-| Grabación | OBS con escena «Pantalla + webcam» (cámara en un círculo, arriba a la derecha) |
+| Grabación | Teams con pantalla compartida y cámara encendida |
 | Micrófono | Prueba de 10 s; sin eco ni teclado |
 | Notificaciones | Modo «No molestar»; cerrar correo y mensajería |
 | Credenciales | A mano en un papel, no en pantalla antes de tiempo |
@@ -21,6 +21,19 @@
 > Mostrar la cara y la voz es un requisito: no se permite narración sintética ni video sin cámara.
 
 ## 2. Estructura y tiempos
+
+### Guion breve de introducción
+
+> «Hola, soy Rafael Andrés Reyes De La Cruz, matrícula 2025-0784. En esta práctica configuré un
+> laboratorio de seguridad de redes con un router, un switch y un servidor Windows.
+>
+> RADIUS es un protocolo que permite centralizar la autenticación, la autorización y el registro de
+> los accesos. En lugar de depender únicamente de cuentas locales en cada equipo, el router y el
+> switch consultan a un servidor para comprobar las credenciales y recibir las instrucciones de acceso.
+>
+> En este laboratorio, Active Directory almacena los usuarios y sus grupos, mientras que NPS actúa
+> como servidor RADIUS. Las políticas asignan distintos niveles de privilegio según el grupo del
+> usuario. A continuación mostraré la topología y las pruebas realizadas.»
 
 ### 0:00 – 0:25 · Presentación (cámara encendida)
 
@@ -161,13 +174,13 @@ ssh -l admin.p4 10.7.84.130   # rechazado por access-class
 
 ## 4. Publicación
 
-1. Subir a YouTube: **público** o **no listado** (el enlace debe abrir sin cuenta).
+1. Grabar en Teams y obtener el enlace de la grabación desde Teams, OneDrive o SharePoint, según dónde se guarde.
 2. Título: `P4 Seguridad de Redes - AAA RADIUS/NPS - Rafael Reyes 2025-0784`.
 3. Descripción: nombre, matrícula, propósito, enlace al repositorio y capítulos con marcas de tiempo.
-4. Copiar el enlace (`https://youtu.be/...`) en:
-   - el bloque de video del `README.md` (reemplazar `REEMPLAZAR_ID`);
+4. Copiar el enlace compartido en:
+   - el bloque de video del `README.md` (reemplazar `ENLACE_DEL_VIDEO_TEAMS`);
    - `RafaelAndresReyesDeLaCruz_20250784_P4.txt`.
-5. Verificar que la miniatura y el video se vean en una ventana de incógnito.
+5. Verificar los permisos del enlace: el profesor debe poder abrirlo con su cuenta autorizada.
 
 ## 5. Errores que descalifican
 

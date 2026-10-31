@@ -9,8 +9,8 @@ Red utilizada   : 10.7.84.0/24
 Repositorio GitHub:
 https://github.com/andreskm45-source/P4-AAA-RADIUS
 
-Video demostrativo (YouTube, maximo 10 minutos):
-https://youtu.be/REEMPLAZAR_ID
+Video demostrativo (grabacion de Teams, maximo 10 minutos):
+ENLACE_DEL_VIDEO_TEAMS
 
 Contenido del repositorio:
 - README.md con el video al inicio y la documentacion completa.
